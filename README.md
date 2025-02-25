@@ -12,7 +12,7 @@
 
 
 ### **Affin Transformations**
-![alt text](https://drive.google.com/file/d/1lfxNeAKMq-AE_G9gpMJY7jCD8DAl5pE5/view?usp=sharing)
+![alt text](misc/affine.gif)
 
 ## **What this app can do**
 ![alt text](misc/1.png)
