@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+border-radius: 10px;
+    text-align: center;
+}
+QWidget{
+    background-color: rgb(71, 71, 71);
+}
+QMenuBar{
+    color: #596686;
+    background-color: rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+QMenu{
+color: #596686;
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 5px; 
+    text-align: center;
+}
+QStatusBar{
+color: #596686;
+    background-color: rgba(0, 0, 0, 0.16);
+    text-align: center;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="name_label">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>725</y>
+      <width>41</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;</string>
+    </property>
+    <property name="text">
+     <string>File:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name_file">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>725</y>
+      <width>151</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="edges_label">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>805</y>
+      <width>71</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;</string>
+    </property>
+    <property name="text">
+     <string>Edges:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="edges_obj">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>805</y>
+      <width>131</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertices_label">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>765</y>
+      <width>81</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;</string>
+    </property>
+    <property name="text">
+     <string>Vertices:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertices_obj">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>765</y>
+      <width>121</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Openfile">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>845</y>
+      <width>365</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="path_file">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>221</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    padding: 5px;
+color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="open_file_button">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>5</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="accessibleDescription">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#000000;&quot;&gt;QPushButton &lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;border-radius:&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#b96000;&quot;&gt; 15px&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;background-color:#&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#d12525;&quot;&gt;aeadad&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;border:&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#b96000;&quot;&gt; none&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#000000;&quot;&gt;QPushButton&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#c121a4;&quot;&gt;hover&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;background-color:#&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#d12525;&quot;&gt;aeadad&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#000000;&quot;&gt;QPushButton:pressed &lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;background-color:#&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#d12525;&quot;&gt;aeadad&lt;/span&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#f3eae3;&quot;&gt;&lt;span style=&quot; font-family:'Menlo','Monaco','Courier New','monospace'; font-size:12px; color:#100a08;&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: none;
+    color: white;
+}
+
+QPushButton:hover {
+    background-color: #626262;
+}
+
+QPushButton:pressed {
+    background-color: #626262;
+}</string>
+     </property>
+     <property name="text">
+      <string>Open File</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="screenshot_btn">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>680</y>
+      <width>190</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}
+
+
+QPushButton:pressed {
+    background-color: #626262;
+border: 2px solid rgb(100, 222, 249); 
+color: white;
+border-radius: 15px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Screenshot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gif_btn">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>680</y>
+      <width>190</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}
+
+
+QPushButton:pressed {
+    background-color: #626262;
+border: 2px solid rgb(100, 222, 249); 
+color: white;
+border-radius: 15px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Gif</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Rotate">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>565</y>
+      <width>391</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>Y</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>Z</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="rotate_x">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>14</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-200</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="rotate_y">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>44</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-200</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="rotate_z">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>74</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-200</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Scale">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>485</y>
+      <width>391</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>10</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="scale_slider">
+     <property name="geometry">
+      <rect>
+       <x>55</x>
+       <y>15</y>
+       <width>291</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>50</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="sliderPosition">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="rotate_label">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>540</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Rotate</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="scale_label">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>460</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Scale</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Move">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>355</y>
+      <width>391</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>Y</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: none;
+    padding: 5px;
+color: rgb(100, 249, 247);
+}</string>
+     </property>
+     <property name="text">
+      <string>Z</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="move_x_slider">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>14</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-200</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="move_y_slider">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>44</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-200</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="move_z_slider">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>74</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider {
+    background-color: rgba(30, 30, 30,0);
+}
+
+QSlider::groove:horizontal {
+    background-color: rgb(30, 30, 30);
+    height: 10px;
+    border-radius: 3px;
+    margin: 0 5px; /* Добавляем отступы с левой и правой стороны */
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(100, 249, 247); 
+    width: 12px;
+    height: 12px;
+    margin: -3px 0;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-200</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="move_label">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>340</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Move</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Projection">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>295</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QComboBox" name="projection_box">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>10</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    background-color: #a2a2a2;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+}
+
+QComboBox::view {
+    background-color: #f0f0f0;
+    /* Светло-серый цвет */
+    border-radius: 6px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Parallel</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Central</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="move_label_2">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>280</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Projection</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Background">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>215</y>
+      <width>391</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="reset_backround_btn">
+     <property name="geometry">
+      <rect>
+       <x>209</x>
+       <y>10</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}
+
+
+QPushButton:pressed {
+    background-color: #626262;
+border: 2px solid rgb(100, 222, 249); 
+color: white;
+border-radius: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="background_palitra">
+     <property name="geometry">
+      <rect>
+       <x>24</x>
+       <y>15</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(255, 255, 255); 
+    color: white;
+}
+
+QPushButton:pressed {
+    background-color: #626262;
+    border: 2px solid rgb(100, 222, 249); 
+    color: white;
+    border-radius: 15px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Select the color</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Vertices">
+    <property name="geometry">
+     <rect>
+      <x>1039</x>
+      <y>119</y>
+      <width>391</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QComboBox" name="display_method_vertices_box">
+     <property name="geometry">
+      <rect>
+       <x>272</x>
+       <y>5</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    background-color: #a2a2a2;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+}
+
+QComboBox::view {
+    background-color: #f0f0f0;
+    /* Светло-серый цвет */
+    border-radius: 6px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Empty</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Circle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Square</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="reset_vertices_btn">
+     <property name="geometry">
+      <rect>
+       <x>273</x>
+       <y>30</y>
+       <width>110</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 5px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}
+
+
+QPushButton:pressed {
+    background-color: #626262;
+border: 2px solid rgb(100, 222, 249); 
+color: white;
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="thinkness_spin_vertices">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>5</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox {
+    background-color: #a2a2a2;
+padding: 5px;
+    color: white;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>50</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="vertices_palitra">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>18</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(255, 255, 255); 
+    color: white;
+}
+
+QPushButton:pressed {
+    background-color: #626262;
+    border: 2px solid rgb(100, 222, 249); 
+    color: white;
+    border-radius: 15px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Select the color</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Edges">
+    <property name="geometry">
+     <rect>
+      <x>1039</x>
+      <y>30</y>
+      <width>391</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border-radius: 10px;
+    background-color: #666666;
+    padding: 5px;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QSpinBox" name="thinkness_spin_edge">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>5</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox {
+    background-color: #a2a2a2;
+padding: 5px;
+    color: white;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="display_method_edges_box">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>10</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>18</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    background-color: #a2a2a2;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+}
+
+QComboBox::view {
+    background-color: #f0f0f0;
+    /* Светло-серый цвет */
+    border-radius: 6px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Solid</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dotted</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="reset_edges_btn">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>35</y>
+       <width>110</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 5px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}
+
+
+QPushButton:pressed {
+    background-color: #626262;
+border: 2px solid rgb(100, 222, 249); 
+color: white;
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="edges_palitra">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>19</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 10px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(255, 255, 255); 
+    color: white;
+}
+
+QPushButton:pressed {
+    background-color: #626262;
+    border: 2px solid rgb(100, 222, 249); 
+    color: white;
+    border-radius: 15px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Select the color</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="move_label_4">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>170</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Vertices</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="move_label_5">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>80</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Edges</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="MyOpenGLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1020</width>
+      <height>880</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="move_label_3">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>260</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    border-radius: 15px;
+    background-color: #a2a2a2;
+    border: 2px solid rgb(100, 249, 247); 
+    color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Background</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timerForGif">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Grande</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#timerForGif{
+	color: rgb(200, 200, 180);
+background-color: rgba(0, 0, 0, 0.5);
+}</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>myopenglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
