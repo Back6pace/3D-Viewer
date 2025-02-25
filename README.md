@@ -54,7 +54,7 @@
     <img src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" title="CPLUS" alt="CPLUS" width="40" height="40"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/qt/qt-original.svg" title="CPLUS" alt="CPLUS" width="50" height="45"/>&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/opengl/opengl-plain.svg" title="CPLUS" alt="CPLUS" width="50" height="45"/>&nbsp;
- <p>Version 3.3</p>
+ <p>OpenGl Version 3.3</p>
 </div>
 
 ## **Installation**
