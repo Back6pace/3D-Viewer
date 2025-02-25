@@ -52,7 +52,7 @@
 
 <div>
     <img src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" title="CPLUS" alt="CPLUS" width="40" height="40"/>&nbsp;
-    <img src="misc/qt_logo.png" title="CPLUS" alt="CPLUS" width="40" height="30"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/qt/qt-original.svg" title="CPLUS" alt="CPLUS" width="40" height="30"/>&nbsp;
 </div>
 
 ## **Installation**
